@@ -16,7 +16,7 @@ class Calculator{
 
 public class InnerMethods {
     public static void main(String[] args) {
-        Calculator obj = new Calculator();
+        Calculator obj = new Calculator(); // obj -refrence variable
         int r1 = obj.add(3, 4, 5);
         System.out.println(r1);
     }
