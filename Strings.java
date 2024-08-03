@@ -26,6 +26,8 @@ public class Strings {
         System.out.println(sb.length()); 
         sb.append(" Kelvin");
         System.out.println(sb);
+        sb.insert(0, "Java ");
+        System.out.println(sb);
 
     }
 }
