@@ -3,17 +3,41 @@
  */
 class Human
 {
-    int age;
-    String name;
+    // private int age = 130;
+    // private String name = "Kiru";
+    private int age;
+    private String name;
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    public void setAge(int a)
+    {
+        age = a;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String n)
+    {
+        name = n;
+    }
 }
 public class Encapsulation 
 {
     public static void main(String[] args) {
         Human obj = new Human();
-        obj.age = 18;
-        obj.name = "Kipruto";
+        // obj.age = 18;
+        // obj.name = "Kipruto";
 
-        System.out.println(obj.name);
+         obj.setAge(20);
+        obj.setName("Kipruto");
+
+        System.out.println(obj.getName() + " : " + obj.getAge());
     }
 
     
