@@ -9,11 +9,17 @@ class Human
     private String name;
 
     // Constructor
-    public Human()
+    public Human() // Default Constructor
     {
         System.out.println("In Constructor");
         age = 12;
         name = "Doe";
+    }
+
+    public Human(int a, String n) // Parameterized Constructor
+    {
+        age = a;
+        name = n;
     }
 
     // Getters and Setters
@@ -36,6 +42,8 @@ public class Encapsulation
 {
     public static void main(String[] args) {
         Human obj = new Human();
+        Human obj1 = new Human(22, "Kiprotich");
+        System.out.println(obj1.getName() + " : " + obj1.getAge());
         // obj.age = 18;
         // obj.name = "Kipruto";
 
