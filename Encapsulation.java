@@ -9,23 +9,38 @@ class Human
     private String name;
 
     // Constructor
-    public Human() // Default Constructor
-    {
-        System.out.println("In Constructor");
-        age = 12;
-        name = "Doe";
-    }
+    // public Human() // Default Constructor
+    // {
+    //     System.out.println("In Constructor");
+    //     age = 12;
+    //     name = "Doe";
+    // }
 
-    public Human(int a, String n) // Parameterized Constructor
-    {
-        age = a;
-        name = n;
-    }
+    // public Human(int a, String n) // Parameterized Constructor
+    // {
+    //     age = a;
+    //     name = n;
+    // }
+
+    
 
     // Getters and Setters
     // this keyword
     public int getAge() {
         return age;
+    }
+    public Human() {
+        age = 10;
+        name = "Runo";
+    }
+    
+    public Human(String name) {
+        this.age = 13;
+        this.name = name;
+    }
+    public Human(int age, String name) {
+        this.age = age;
+        this.name = name;
     }
     public void setAge(int age) {
         this.age = age;
