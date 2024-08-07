@@ -1,18 +1,32 @@
 /**
  * Inheritance
  */
-
-//  class Calc
-//  {
-//     public int add(int n1, int n2)
-//     {
-//         return n1 + n2;
-//     }
-//     public int sub(int n1, int n2)
-//     {
-//         return n1 - n2;
-//     }
-//  }
+class Aa // extends Object
+{
+    public Aa()
+    {
+        super();
+        System.out.println("In Aa");
+    }
+    public Aa(int n)
+    {
+        super();
+        System.out.println("In Aa int");
+    }
+}
+class Bb extends Aa
+{
+    public Bb()
+    {
+        super(7);
+        System.out.println("In Bb");
+    }
+    public Bb(int n)
+    {
+        super(n); 
+        System.out.println("In Bb int");
+    }
+}
 
 public class Inheritance {
     public static void main(String[] args) {
@@ -26,6 +40,10 @@ public class Inheritance {
         double r5 = obj.power(4, 4);
 
         System.out.println(r1 + " " + r2 + " " +  r3 + " " + r4 + " " + r5);
+
+        // Bb obj1 = new Bb();
+        // Bb obj1 = new Bb(6);
+        Bb obj1 = new Bb();
     }
 
     
