@@ -18,12 +18,13 @@ class Bb extends Aa
 {
     public Bb()
     {
-        super(7);
+        super();
         System.out.println("In Bb");
     }
     public Bb(int n)
     {
-        super(n); 
+        // super(n);  // Execute Constructor of a Super class
+        this(); // Execute Constructor of the same class
         System.out.println("In Bb int");
     }
 }
@@ -43,7 +44,7 @@ public class Inheritance {
 
         // Bb obj1 = new Bb();
         // Bb obj1 = new Bb(6);
-        Bb obj1 = new Bb();
+        Bb obj1 = new Bb(2);
     }
 
     
