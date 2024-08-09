@@ -1,6 +1,9 @@
+// package methods;
+
 /**
  * Methods in java
  */
+
 // class Computer{
 //     public void playMusic()
 //     {
@@ -25,6 +28,9 @@
 
     
 // }
+
+// import tools.AdvCalc;
+// import tools.Calc;
 
 /**
  * Methods Overriding
