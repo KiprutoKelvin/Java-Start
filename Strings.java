@@ -1,6 +1,14 @@
 /**
  * Strings
  */
+class Ac
+{
+
+}
+class Bc extends Ac
+{
+
+}
 public class Strings {
 
     public static void main(String[] args) {
@@ -28,6 +36,12 @@ public class Strings {
         System.out.println(sb);
         sb.insert(0, "Java ");
         System.out.println(sb);
+        
+        /* Type Casting */
+        double d = 14.5;
+        int i = (int)d;
+
+        System.out.println(i);
 
     }
 }
