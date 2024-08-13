@@ -3,11 +3,17 @@
  */
 class Ac
 {
-
+    public void show1()
+    {
+        System.out.println("In Ac Show");
+    }
 }
 class Bc extends Ac
 {
-
+    public void show2()
+    {
+        System.out.println("In Bc Show");
+    }
 }
 public class Strings {
 
@@ -42,6 +48,15 @@ public class Strings {
         int i = (int)d;
 
         System.out.println(i);
+
+        // Ac obj = new Ac();
+        // Ac obj = (Ac) new Bc(); // Upcasting
+        Ac obj = new Bc(); // Upcasting Happens by default
+        obj.show1();
+
+        Bc obj1 = (Bc) obj; // Downcasting
+        obj1.show2();
+
 
     }
 }
