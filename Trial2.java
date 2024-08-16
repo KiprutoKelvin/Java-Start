@@ -1,6 +1,6 @@
 /**
  * Trial2 
- *  Interface
+ * Interface
  */
 interface A
 {
@@ -27,12 +27,12 @@ public interface Trial2 {
         obj = new B();
         // {
 
-        //     // @Override
+        //     
         //     public void show() {
         //        System.out.println("In Show");
         //     }
 
-        //     // @Override
+        //     
         //     public void config() {
         //         System.out.println("In Config");
         //     }
