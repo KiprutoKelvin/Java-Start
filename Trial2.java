@@ -1,6 +1,9 @@
 /**
  * Trial2 
  * Interface
+ * class - class -> extends
+ * class - interface -> implements
+ * interface - interface -> extends
  */
 interface A
 {
@@ -14,6 +17,10 @@ interface X
 {
     void run();
 }
+interface Y extends X
+{
+
+}
 class B implements A,X
 {
     public void show()
@@ -26,7 +33,7 @@ class B implements A,X
     }
    public void run()
    {
-
+        System.out.println("Running...");
    }
 }
 public interface Trial2 {
@@ -48,7 +55,10 @@ public interface Trial2 {
         // };
         obj.show();
         obj.config();
-        
+
+        X obj1 = new B();
+        obj1.run();
+             
         System.out.println(A.age);
     }
 
