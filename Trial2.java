@@ -10,7 +10,11 @@ interface A
     void show();
     void config();
 }
-class B implements A
+interface X
+{
+    void run();
+}
+class B implements A,X
 {
     public void show()
     {
@@ -20,6 +24,10 @@ class B implements A
     {
         System.out.println("In Config");
     }
+   public void run()
+   {
+
+   }
 }
 public interface Trial2 {
     public static void main(String[] args) {
