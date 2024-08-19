@@ -51,7 +51,7 @@
 //     }
 // }
 /**
- * Enum
+ * Enum class
  */
 enum Laptop
 {
