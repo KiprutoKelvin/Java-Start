@@ -3,21 +3,33 @@ import other.*;
 /**
  * Demo1
  */
-class A
+// class A
+// {
+//     public void show()
+//     {
+//         System.out.println("In A show");
+//     }
+// }
+// class B extends A
+// {   
+//     @Override
+//     public void show()
+//     {
+//         System.out.println("In B show");
+//     }
+// }
+@FunctionalInterface
+interface A
 {
-    public void show()
-    {
-        System.out.println("In A show");
-    }
+    void show();
 }
-class B extends A
-{   
-    @Override
-    public void show()
-    {
-        System.out.println("In B show");
-    }
-}
+// class B implements A
+// {
+//     public void show()
+//     {
+//         System.out.println("In Show");
+//     }
+// }
 public class Demo1 {
 
     public static void main(String[] args) 
@@ -25,7 +37,13 @@ public class Demo1 {
         // Ac obj = new Ac();
         // System.out.println(obj.marks);
 
-        B obj = new B();
+        A obj = new A()
+        {
+            public void show()
+            {
+                System.out.println("In Show");
+            }
+        };
         obj.show();
     }
 }
