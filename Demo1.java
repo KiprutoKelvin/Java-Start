@@ -21,7 +21,7 @@ import other.*;
 @FunctionalInterface
 interface A
 {
-    void show(int i);
+    int add(int i, int j);
 }
 // class B implements A
 // {
@@ -37,8 +37,9 @@ public class Demo1 {
         // Ac obj = new Ac();
         // System.out.println(obj.marks);
 
-        A obj =  i -> System.out.println("In Show " + i);
-
-        obj.show(5);
+        A obj = (i, j) -> i+j;
+            
+        int result = obj.add(5,6);
+        System.out.println(result);
     }
 }
