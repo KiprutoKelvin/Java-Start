@@ -1,3 +1,18 @@
+/*
+ * Exception Handling
+ * Using Try Catch
+ * Multiple Catch
+ * Custom Exception
+ */
+
+class KiprutoException extends Exception
+{
+   public KiprutoException(String string)
+   {
+        super(string);
+   }
+}
+
 public class Logical {
 
     public static void main(String[] args) {
@@ -10,11 +25,7 @@ public class Logical {
         // boolean result = a > b;
         // System.out.println(!result);
 
-/*
- * Exception Handling
- * Using Try Catch
- * Multiple Catch
- */
+
         int i = 20;
         int j = 0;
 
@@ -28,9 +39,9 @@ public class Logical {
             // System.out.println(nums[1]);
             // System.out.println(nums[6]);
             if(j==0)
-                throw new ArithmeticException("Dont print Zero");
+                throw new KiprutoException("Dont print Zero");
         } 
-        catch (ArithmeticException e) 
+        catch (KiprutoException e) 
         {
             j = 18/1;
             System.out.println("Thats the Default Output " + e);
