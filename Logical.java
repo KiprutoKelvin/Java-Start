@@ -15,7 +15,7 @@ public class Logical {
  * Using Try Catch
  * Multiple Catch
  */
-        int i = 2;
+        int i = 20;
         int j = 0;
 
         int nums[] = new int[6];
@@ -24,18 +24,22 @@ public class Logical {
         try 
         {
             j = 18/i;
-            System.out.println(str.length());
-            System.out.println(nums[1]);
-            System.out.println(nums[6]);
+            // System.out.println(str.length());
+            // System.out.println(nums[1]);
+            // System.out.println(nums[6]);
+            if(j==0)
+                throw new ArithmeticException("Dont print Zero");
         } 
         catch (ArithmeticException e) 
         {
-            System.out.println("Cannot divide by zero");
+            j = 18/1;
+            System.out.println("Thats the Default Output " + e);
+            // System.out.println("Cannot divide by zero");
         }
-        catch(ArrayIndexOutOfBoundsException e)
-        {
-            System.out.println("Stay in your limit");
-        }
+        // catch(ArrayIndexOutOfBoundsException e)
+        // {
+        //     System.out.println("Stay in your limit");
+        // }
         catch(Exception e)
         {
             System.out.println("Something went wrong..." + e);
