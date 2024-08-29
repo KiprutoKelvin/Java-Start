@@ -25,7 +25,7 @@ public class Wrappers {
         // System.out.println(num1);
         // System.out.println(num2);
 
-        System.out.println("Enter a number");
+        // System.out.println("Enter a number");
         /* 1st Method */
         // int numb = System.in.read();
         // System.out.println(numb - 48);
@@ -40,9 +40,21 @@ public class Wrappers {
         // bf.close(); //Closing Resource
 
         /* 3rd Method */
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
 
-        int num = sc.nextInt();
-        System.out.println(num);
+        // int num = sc.nextInt();
+        // System.out.println(num);
+
+        int num = 0;
+        try
+        {
+            InputStreamReader in = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(in);
+            num = Integer.parseInt(br.readLine());
+        }
+        finally
+        {
+            System.out.println("Bye"); 
+        }
     }
 }
