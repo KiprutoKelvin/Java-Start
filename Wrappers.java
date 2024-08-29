@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Wrappers {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws NumberFormatException, IOException {
         // int num = 7;
         // // Integer num1 = new Integer(5);
         // // Integer num1 = new Integer(num); // Boxing
@@ -46,15 +46,11 @@ public class Wrappers {
         // System.out.println(num);
 
         int num = 0;
-        try
-        {
-            InputStreamReader in = new InputStreamReader(System.in);
-            BufferedReader br = new BufferedReader(in);
-            num = Integer.parseInt(br.readLine());
-        }
-        finally
-        {
-            System.out.println("Bye"); 
-        }
+            try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in)))
+            {
+                num = Integer.parseInt(br.readLine());
+                System.out.println(num);
+            }
+           
     }
 }
