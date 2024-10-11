@@ -6,9 +6,12 @@ class At extends Thread
 {
     public void run()
     {
-        for(int i=1;i<=10;i++)
+        for(int i=1;i<=100;i++)
         {
             System.out.println("Salut");
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) { e.printStackTrace(); }
         }
     }
 }
@@ -16,9 +19,12 @@ class Bt extends Thread
 {
     public void run()
     {
-        for(int i=1;i<=10;i++)
+        for(int i=1;i<=100;i++)
         {
             System.out.println("Bonjour");
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) { e.printStackTrace(); }
         }
     }
 }
@@ -27,7 +33,14 @@ public class Threads {
         At obj1 = new At();
         Bt obj2 = new Bt();
 
+        // System.out.println(obj1.getPriority());
+        // obj2.setPriority(Thread.MAX_PRIORITY);
+
         obj1.start();
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) { e.printStackTrace(); }
+
         obj2.start();
     }
 
