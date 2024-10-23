@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Collections;
 import java.util.Comparator;
 
-class Mwanafunzi implements Comparable<Mwanafunzi>
+class Mwanafunzi
 {
     int age;
     String name;
@@ -17,12 +17,7 @@ class Mwanafunzi implements Comparable<Mwanafunzi>
         return "Mwanafunzi [age=" + age + ", name=" + name + "]";
     }
 
-    public int compareTo(Mwanafunzi that) {
-        if(this.age > that.age)
-            return 1;
-        else
-            return -1;
-    }
+   
 
     
 }
@@ -50,17 +45,8 @@ public class Sort {
         
         // System.out.println(nums);
 
-        Comparator<Mwanafunzi> com = new Comparator<Mwanafunzi>() 
-        {
-            public int compare(Mwanafunzi i, Mwanafunzi j)
-            {
-                if(i.age > j.age)
-                    return 1;
-                else
-                    return -1;
-            }
-        };
-
+        Comparator<Mwanafunzi> com = ( i,  j) -> i.age > j.age ? 1:-1;
+    
         List<Mwanafunzi> mwana = new ArrayList<>();
         mwana.add(new Mwanafunzi(21, "Kiprotich"));
         mwana.add(new Mwanafunzi(12, "Biwott"));
