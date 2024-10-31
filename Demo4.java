@@ -1,6 +1,5 @@
 import java.util.List;
 import java.util.Arrays;
-
 public class Demo4 {
 
     public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class Demo4 {
         // }
 
         // forEach Method
-        nums.forEach(n -> System.out.println(n));
+        // nums.forEach(n -> System.out.println(n));
 
         // int sum = 0;
         // for(int n: nums)
@@ -30,5 +29,7 @@ public class Demo4 {
         //     }
         // }
         // System.out.println(sum);
+          
+        nums.forEach(n -> System.out.println(n));
     }
 }
