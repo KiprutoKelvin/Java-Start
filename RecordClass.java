@@ -53,12 +53,10 @@
 // }
 
 record Alien (int id, String name) {
-    public Alien(int id, String name)
+    public Alien
     {
         if(id==0)
-            throw new IllegalArgumentException("id cannot be zero")
-        this.id = id;
-        this.name = name;
+            throw new IllegalArgumentException("id cannot be zero");
     }
 }
 
@@ -66,10 +64,11 @@ public class RecordClass {
     public static void main(String[] args) {
         Alien a1 = new Alien(1, "Mambet");
         Alien a2 = new Alien(1, "Mambet");
-        Alien a3 = new Alien(0, "Mambet");
+        Alien a3 = new Alien(3, "Mambet");
 
         System.out.println(a1.equals(a2));
         System.out.println(a1);
-        // System.out.println(a1.getName());
+        System.out.println(a3);
+        System.out.println(a1.name());
     }
 }
